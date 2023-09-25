@@ -23,7 +23,9 @@ class PySysTest(EYBaseTest):
 
 		self.create_conversion_fields()
 
+	# Test entry point
 	def execute(self):
+		# Gets the connection string from unix.properties and connects to MongoDB
 		db = self.get_db_connection()
 		self.clear_all(db)
 		# sub_dir = 'all'
