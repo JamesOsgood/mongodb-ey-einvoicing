@@ -45,7 +45,6 @@ class PySysTest(EYBaseTest):
 			else:
 				if filename.endswith("xml"):
 					# self.log.info(f'Processing file {filename}')
-					docs = []
 					for stub in self.importers.keys():
 						if filename.startswith(stub):
 							with open(os.path.join(data_dir, filename)) as file:					
@@ -103,8 +102,11 @@ class PySysTest(EYBaseTest):
 			parent, field_name = self.get_immediate_parent_and_field_name(doc, field.split('|'))
 			convert_func(parent, field_name)
 
+		# Create the mock data
 		doc['header'] = self.create_header(doc)
 		doc['mof_response'] = self.create_mof_response(doc)
+		
+		# Collect all queryable fields into 1 section
 		doc['queryable'] = self.create_queryable_fields(doc)
 		self.create_invoice_key(doc)
 
