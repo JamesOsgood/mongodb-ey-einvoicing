@@ -13,7 +13,7 @@ class AppTest {
         App classUnderTest = new App();
 
         // Should exist
-        String key = "380|R051K8-319|2023-01-08|RO21101687";
+        String key = "380|R051K9-4|2023-01-09|RO22334455";
         assertEquals(classUnderTest.invoice_key_exists(key), true);
         
         // Doesn't exists
