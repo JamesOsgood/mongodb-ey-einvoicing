@@ -1,0 +1,373 @@
+Data Field name in the Staging File,Cardinality,xml tag
+BusinessProcessType,cbc:ProfileID(..1),cbc:ProfileID
+-,cbc:CustomizationID(..1),"cbc:CustomizationID = ""urn:cen.eu:en16931:2017#compliant#urn: efactura.mfinante.ro:RO_CIUS:1.0.0.2021"""
+InvoiceType,"cbc:InvoiceTypeCode(..1) / 
+cbc:CreditNoteTypeCode(..1)",cbc:InvoiceTypeCode
+InvoiceNumber,cbc:ID(..1),cbc:ID
+InvoiceDate,cbc:IssueDate(..1),cbc:IssueDate
+SellerLegalID,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PartyLegalEntity(..1)/cbc:CompanyID(..1),cac:AccountingSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID
+SellerVATID,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PartyTaxScheme(..1)/cbc:CompanyID(..1),cac:AccountingSupplierParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID
+InvoiceCurrencyCode,cbc:DocumentCurrencyCode(..1),cbc:DocumentCurrencyCode
+VATCurrencyCode,cbc:TaxCurrencyCode(..1),cbc:TaxCurrencyCode
+VATPointDate,cbc:TaxPointDate(..1),cbc:TaxPointDate
+VATPointCode,cac:InvoicePeriod(..1)/cbc:DescriptionCode(..1),cac:InvoicePeriod/cbc:DescriptionCode
+InvoiceStartDate,cac:InvoicePeriod(..1)/cbc:StartDate(..1),cac:InvoicePeriod/cbc:StartDate
+InvoiceEndDate,cac:InvoicePeriod(..1)/cbc:EndDate(..1),cac:InvoicePeriod/cbc:EndDate
+InvoiceNoteCode,cbc:Note(..1),cbc:Note
+InvoiceNote,cbc:Note(..1),cbc:Note
+SellerLegalName,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PartyLegalEntity(..1)/cbc:RegistrationName(..1),cac:AccountingSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName
+SellerLegalID_Scheme,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PartyLegalEntity(..1)/cbc:CompanyID(..1) / @schemeID(..1),cac:AccountingSupplierParty / cac:Party / cac:PartyLegalEntity / cbc:CompanyID  / @schemeID
+SellerTradingName,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PartyName(..1)/cbc:Name(..1),cac:AccountingSupplierParty/cac:Party/cac:PartyName/cbc:Name
+-,"cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PartyTaxScheme(..1)/cac:TaxScheme(..1)/cbc:ID= ""VAT""(..1)","cac:AccountingSupplierParty/cac:Party/cac:PartyTaxScheme/cac:TaxScheme/cbc:ID= ""VAT"""
+SellerTaxRegistrationID,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PartyTaxScheme(..1)/cbc:CompanyID(..1),cac:AccountingSupplierParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID
+-,"cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PartyTaxScheme(..1)/cac:TaxScheme(..1)/cbc:ID=! ""VAT""(..1)","cac:AccountingSupplierParty/cac:Party/cac:PartyTaxScheme/cac:TaxScheme/cbc:ID=! ""VAT"""
+SellerAdditionalLegalInfo,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PartyLegalEntity(..1)/cbc:CompanyLegalForm(..1),cac:AccountingSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyLegalForm
+SellerEndpoint,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cbc:EndpointID(..1),cac:AccountingSupplierParty/cac:Party/cbc:EndpointID
+SellerEndpoint_Scheme,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cbc:EndpointID (..1)/@schemeID(..1),cac:AccountingSupplierParty/cac:Party/cbc:EndpointID /@schemeID
+SellerIdentifier,n(50),-
+SellerIdentificationID,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PartyIdentification(..50)/cbc:ID(..1),cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID
+SellerIdentificationID_Scheme,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PartyIdentification(..50)/cbc:ID(..1) /  @schemeID (..1),cac:AccountingSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID / @schemeID
+SellerAddress1,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PostalAddress(..1)/cbc:StreetName(..1),cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cbc:StreetName
+SellerAddress2,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PostalAddress(..1)/cbc:AdditionalStreetName(..1),cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cbc:AdditionalStreetName
+SellerAddress3,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PostalAddress(..1)/cac:AddressLine(..1)/cbc:Line(..1),cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:AddressLine/cbc:Line
+SellerCity,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PostalAddress(..1)/cbc:CityName(..1),cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cbc:CityName
+SellerPostcode,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PostalAddress(..1)/cbc:PostalZone(..1),cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cbc:PostalZone
+SellerSubdivision,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PostalAddress(..1)/cbc:CountrySubentity(..1),cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cbc:CountrySubentity
+SellerCountry,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:PostalAddress(..1)/cac:Country(..1)/cbc:IdentificationCode(..1),cac:AccountingSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode
+SellerContactName,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:Contact(..1)/cbc:Name(..1),cac:AccountingSupplierParty/cac:Party/cac:Contact/cbc:Name
+SellerContactNumber,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:Contact(..1)/cbc:Telephone(..1),cac:AccountingSupplierParty/cac:Party/cac:Contact/cbc:Telephone
+SellerEmail,cac:AccountingSupplierParty(..1)/cac:Party(..1)/cac:Contact(..1)/cbc:ElectronicMail(..1),cac:AccountingSupplierParty/cac:Party/cac:Contact/cbc:ElectronicMail
+BuyerLegalName,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:PartyLegalEntity(..1)/cbc:RegistrationName(..1),cac:AccountingCustomerParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName
+BuyerLegalID,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:PartyLegalEntity(..1)/cbc:CompanyID(..1),cac:AccountingCustomerParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID
+BuyerLegalID_Scheme,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:PartyLegalEntity(..1)/cbc:CompanyID(..1)/ @SchemeID(..1),cac:AccountingCustomerParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID/ @SchemeID
+BuyerTradingName,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:PartyName(..1)cbc:Name(..1),cac:AccountingCustomerParty/cac:Party/cac:PartyName/cbc:Name
+BuyerIdentificationID,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:PartyIdentification(..1)/cbc:ID(..1),cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/cbc:ID
+BuyerIdentificationID_Scheme,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:PartyIdentification(..1)/cbc:ID(..1) / @SchemeID(..1),cac:AccountingCustomerParty/cac:Party/cac:PartyIdentification/cbc:ID / @SchemeID
+BuyerVATID,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:PartyTaxScheme(..1)/cbc:CompanyID(..1),cac:AccountingCustomerParty/cac:Party/cac:PartyTaxScheme/cbc:CompanyID
+-,"cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:PartyTaxScheme(..1)/cac:TaxScheme(..1)/cbc:ID= ""VAT""(..1)","cac:AccountingCustomerParty/cac:Party/cac:PartyTaxScheme/cac:TaxScheme/cbc:ID= ""VAT"""
+BuyerEndpoint,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cbd:EndpointID(..1),cac:AccountingCustomerParty/cac:Party/cbd:EndpointID
+BuyerEndpoint_Scheme,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cbd:EndpointID(..1) / @schemeID(..1),cac:AccountingCustomerParty/cac:Party/cbd:EndpointID/ @schemeID
+BuyerAddress1,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:PostalAddress(..1)/cbc:StreetName(..1),cac:AccountingCustomerParty/cac:Party/cac:PostalAddress/cbc:StreetName
+BuyerAddress2,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:PostalAddress(..1)/cbc:AdditionalStreetName(..1),cac:AccountingCustomerParty/cac:Party/cac:PostalAddress/cbc:AdditionalStreetName
+BuyerAddress3,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:PostalAddress(..1)/cac:AddressLine(..1)/cbc:Line(..1),cac:AccountingCustomerParty/cac:Party/cac:PostalAddress/cac:AddressLine/cbc:Line
+BuyerCity,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:PostalAddress(..1)/cbc:CityName(..1),cac:AccountingCustomerParty/cac:Party/cac:PostalAddress/cbc:CityName
+BuyerPostcode,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:PostalAddress(..1)/cbc:PostalZone(..1),cac:AccountingCustomerParty/cac:Party/cac:PostalAddress/cbc:PostalZone
+BuyerSubdivision,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:PostalAddress(..1)/cbc:CountrySubentity(..1),cac:AccountingCustomerParty/cac:Party/cac:PostalAddress/cbc:CountrySubentity
+BuyerCountry,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:PostalAddress(..1)/cac:Country(..1)/cbc:IdentificationCode(..1),cac:AccountingCustomerParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode
+BuyerContactName,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:Contact(..1)/cbc:Name(..1),cac:AccountingCustomerParty/cac:Party/cac:Contact/cbc:Name
+BuyerContactNumber,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:Contact(..1)/cbc:Telephone(..1),cac:AccountingCustomerParty/cac:Party/cac:Contact/cbc:Telephone
+BuyerEmail,cac:AccountingCustomerParty(..1)/cac:Party(..1)/cac:Contact(..1)/cbc:ElectronicMail(..1),cac:AccountingCustomerParty/cac:Party/cac:Contact/cbc:ElectronicMail
+BuyerReference,cbc:BuyerReference(..1),cbc:BuyerReference
+BuyerAccountingReference,cbc:AccountingCost(..1),cbc:AccountingCost
+PurchaseOrderReference,cac:OrderReference(..1)/cbc:ID(..1),cac:OrderReference/cbc:ID
+SalesOrderReference,cac:OrderReference(..1)/cbc:SalesOrderID(..1),cac:OrderReference/cbc:SalesOrderID
+ContractReference,cac:ContractDocumentReference(..1)/cbc:ID(..1),cac:ContractDocumentReference/cbc:ID
+ProjectReference,cac:ProjectReference(..1)/cbc:ID(..1),cac:ProjectReference/cbc:ID
+Receivingadvicereference,cac:ReceiptDocumentReference(..1)/cbc:ID(..1),cac:ReceiptDocumentReference/cbc:ID
+DespatchAdviceReference,cac:DespatchDocumentReference(..1)/cbc:ID(..1),cac:DespatchDocumentReference/cbc:ID
+TenderReference,cac:OriginatorDocumentReference(..1)/cbc:ID(..1),cac:OriginatorDocumentReference/cbc:ID
+DeliverToParty,cac:Delivery(..1)/cac:DeliveryParty(..1)/cac:PartyName(..1)/cbc:Name(..1),cac:Delivery/cac:DeliveryParty/cac:PartyName/cbc:Name
+DeliveryLocationID,cac:Delivery(..1)/cac:DeliveryLocation(..1)/cbc:ID(..1),cac:Delivery/cac:DeliveryLocation/cbc:ID
+DeliveryLocationID_Scheme,cac:Delivery(..1)/cac:DeliveryLocation(..1)/cbc:ID(..1) / @SchemeID(..1),cac:Delivery/cac:DeliveryLocation/cbc:ID / @SchemeID
+DeliveryDate,cac:Delivery(..1)/cbc:ActualDeliveryDate(..1),cac:Delivery/cbc:ActualDeliveryDate
+DeliveryAddress1,cac:Delivery(..1)/cac:DeliveryLocation(..1)/cac:Address(..1)/cbc:StreetName(..1),cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:StreetName
+DeliveryAddress2,cac:Delivery(..1)/cac:DeliveryLocation(..1)/cac:Address(..1)/cbc:AdditionalStreetName(..1),cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:AdditionalStreetName
+DeliveryAddress3,cac:Delivery(..1)/cac:DeliveryLocation(..1)/cac:Address(..1)/cac:AddressLine(..1)/cbc:Line(..1),cac:Delivery/cac:DeliveryLocation/cac:Address/cac:AddressLine/cbc:Line
+DeliveryCity,cac:Delivery(..1)/cac:DeliveryLocation(..1)/cac:Address(..1)/cbc:CityName(..1),cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:CityName
+DeliveryPostcode,cac:Delivery(..1)/cac:DeliveryLocation(..1)/cac:Address(..1)/cbc:PostalZone(..1),cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:PostalZone
+DeliverySubdivision,cac:Delivery(..1)/cac:DeliveryLocation(..1)/cac:Address(..1)/cbc:CountrySubentity(..1),cac:Delivery/cac:DeliveryLocation/cac:Address/cbc:CountrySubentity
+DeliveryCountry,cac:Delivery(..1)/cac:DeliveryLocation(..1)/cac:Address(..1)/cac:Country(..1)/cbc:IdentificationCode(..1),cac:Delivery/cac:DeliveryLocation/cac:Address/cac:Country/cbc:IdentificationCode
+TaxRepresentativeName,cac:TaxRepresentativeParty(..1)/cac:PartyName(..1)/cbc:Name(..1),cac:TaxRepresentativeParty/cac:PartyName/cbc:Name
+TaxRepresentativeVATID,cac:TaxRepresentativeParty(..1)/cac:PartyTaxScheme(..1)/cbc:CompanyID(..1),cac:TaxRepresentativeParty/cac:PartyTaxScheme/cbc:CompanyID
+-,"cac:TaxRepresentativeParty(..1)/cac:PartyTaxScheme(..1)/cac:TaxScheme(..1)/cbc:ID= ""VAT""(..1)","cac:TaxRepresentativeParty/cac:PartyTaxScheme/cac:TaxScheme/cbc:ID= ""VAT"""
+TaxRepresentativeAddress1,cac:TaxRepresentativeParty(..1)/cac:PostalAddress(..1)/cbc:StreetName(..1),cac:TaxRepresentativeParty/cac:PostalAddress/cbc:StreetName
+TaxRepresentativeAddress2,cac:TaxRepresentativeParty(..1)/cac:PostalAddress(..1)/cbc:AdditionalStreetName(..1),cac:TaxRepresentativeParty/cac:PostalAddress/cbc:AdditionalStreetName
+TaxRepresentativeAddress3,cac:TaxRepresentativeParty(..1)/cac:PostalAddress(..1)/cac:AddressLine(..1)/cbc:Line(..1),cac:TaxRepresentativeParty/cac:PostalAddress/cac:AddressLine/cbc:Line
+TaxRepresentativeCity,cac:TaxRepresentativeParty(..1)/cac:PostalAddress(..1)/cbc:CityName(..1),cac:TaxRepresentativeParty/cac:PostalAddress/cbc:CityName
+TaxRepresentativePostcode,cac:TaxRepresentativeParty(..1)/cac:PostalAddress(..1)/cbc:PostalZone(..1),cac:TaxRepresentativeParty/cac:PostalAddress/cbc:PostalZone
+TaxRepresentativeSubdivision,cac:TaxRepresentativeParty(..1)/cac:PostalAddress(..1)/cbc:CountrySubentity(..1),cac:TaxRepresentativeParty/cac:PostalAddress/cbc:CountrySubentity
+TaxRepresentativeCountry,cac:TaxRepresentativeParty(..1)/cac:PostalAddress(..1)/cac:Country(..1)/cbc:IdentificationCode(..1),cac:TaxRepresentativeParty/cac:PostalAddress/cac:Country/cbc:IdentificationCode
+LineNumber,"cac:InvoiceLine(..*)/cbc:ID(..1)
+cac:CreditNoteLine(..*)/cbc:ID(..1)",cac:InvoiceLine/cbc:ID
+TransactionType,,-
+LineNote,"cac:InvoiceLine(..*)/cbc:Note(..1)
+cac:CreditNoteLine(..*)/cbc:Note(..1)",cac:InvoiceLine/cbc:Note
+InvoiceLineID,"cac:InvoiceLine(..*)/cac:DocumentReference(..1)/cbc:ID(..1)
+cac:CreditNoteLine(..*)/cac:DocumentReference(..1)/cbc:ID(..1)",cac:InvoiceLine/cac:DocumentReference/cbc:ID
+LineScheme,"cac:InvoiceLine(..*)/cac:DocumentReference(..1)/cbc:ID(..1) / @SchemeID
+cac:CreditNoteLine(..*)/cac:DocumentReference(..1)/cbc:ID(..1) / @SchemeID",cac:InvoiceLine/cac:DocumentReference/cbc:ID / @SchemeID
+LineQuantity,"cac:InvoiceLine(..*)/cbc:InvoicedQuantity(..1)
+cac:CreditNoteLine(..*)/cbc:InvoicedQuantity(..1)",cac:InvoiceLine/cbc:InvoicedQuantity
+LineUOMCode,"cac:InvoiceLine(..*)/cbc:InvoicedQuantity(..1)/@unitCode(..1)
+cac:CreditNoteLine(..*)/cbc:InvoicedQuantity(..1)/@unitCode(..1)",cac:InvoiceLine/cbc:InvoicedQuantity/@unitCode
+LineNetAmount,"cac:InvoiceLine(..*)/cbc:LineExtensionAmount(..1)
+cac:CreditNoteLine(..*)/cbc:LineExtensionAmount(..1)
+BT-5 Value to be added @currencyID","cac:InvoiceLine/cbc:LineExtensionAmount
+BT-5 Value to be added @currencyID"
+POLineID,"cac:InvoiceLine(..*)/cac:OrderLineReference(..1)/cbc:LineID(..1)
+cac:CreditNoteLine(..*)/cac:OrderLineReference(..1)/cbc:LineID(..1)",cac:InvoiceLine/cac:OrderLineReference/cbc:LineID
+LineBuyerAccountingReference,"cac:InvoiceLine(..*)/cbc:AccountingCost(..1)
+cac:CreditNoteLine(..*)/cbc:AccountingCost(..1)",cac:InvoiceLine/cbc:AccountingCost
+LineStartDate,"cac:InvoiceLine(..*)/cac:InvoicePeriod(..1)/cbc:StartDate(..1)
+cac:CreditNoteLine(..*)/cac:InvoicePeriod(..1)/cbc:StartDate(..1)",cac:InvoiceLine/cac:InvoicePeriod/cbc:StartDate
+LineEndDate,"cac:InvoiceLine(..*)/cac:InvoicePeriod(..1)/cbc:EndDate(..1)
+cac:CreditNoteLine(..*)/cac:InvoicePeriod(..1)/cbc:EndDate(..1)",cac:InvoiceLine/cac:InvoicePeriod/cbc:EndDate
+LineVATCategory,"cac:InvoiceLine(..*)/cac:Item(..1)/cac:ClassifiedTaxCategory(..1)/cbc:ID(..1)
+cac:CreditNoteLine(..*)/cac:Item(..1)/cac:ClassifiedTaxCategory(..1)/cbc:ID(..1)",cac:InvoiceLine/cac:Item/cac:ClassifiedTaxCategory/cbc:ID
+LineVATRate,"cac:InvoiceLine(..*)/cac:Item(..1)/cac:ClassifiedTaxCategory(..1)/cbc:Percent(..1)
+cac:CreditNoteLine(..*)/cac:Item(..1)/cac:ClassifiedTaxCategory(..1)/cbc:Percent(..1)",cac:InvoiceLine/cac:Item/cac:ClassifiedTaxCategory/cbc:Percent
+TaxCode,..*,-
+-,"cac:InvoiceLine(..*)/cac:Item(..1)/cac:ClassifiedTaxCategory(..1)/cbc:ID = ""VAT""
+cac:CreditNoteLine(..*)/cac:Item(..1)/cac:ClassifiedTaxCategory(..1)/cbc:ID = ""VAT""","cac:InvoiceLine/cac:Item/cac:ClassifiedTaxCategory/cac:TaxScheme/cbc:ID = ""VAT"""
+LineItemBaseQuantity,"cac:InvoiceLine(..*)/cac:Price(..1)/cbc:BaseQuantity(..1)
+cac:CreditNoteLine(..*)/cac:Price(..1)/cbc:BaseQuantity(..1)",cac:InvoiceLine/cac:Price/cbc:BaseQuantity
+-,"cac:InvoiceLine(..*)/cac:Price(..1)/cbc:BaseQuantity(..1)/@unitCode
+cac:CreditNoteLine(..*)/cac:Price(..1)/cbc:BaseQuantity(..1)/@unitCode",cac:InvoiceLine/cac:Price/cbc:BaseQuantity/@unitCode
+-,"cac:InvoiceLine(..*)/cac:Price(..1)/cac:AllowanceCharge(..1)/cbc:ChargeIndicator(..1)=false
+cac:CreditNoteLine(..*)/cac:Price(..1)/cac:AllowanceCharge(..1)/cbc:ChargeIndicator(..1)=false","cac:InvoiceLine/cac:Price/cac:AllowanceCharge/cbc:ChargeIndicator = ""false"""
+LineItemGrossPrice,"cac:InvoiceLine(..*)/cac:Price(..1)/cac:AllowanceCharge(..1)/cbc:BaseAmount(..1)
+cac:CreditNoteLine(..*)/cac:Price(..1)/cac:AllowanceCharge(..1)/cbc:BaseAmount(..1)
+BT-5 Value to be added @currencyID","cac:InvoiceLine/cac:Price/cac:AllowanceCharge/cbc:BaseAmount
+BT-5 Value to be added @currencyID"
+LineItemDiscount,"cac:InvoiceLine(..*)/cac:Price(..1)/cac:AllowanceCharge(..1)/cbc:Amount(..1)
+cac:CreditNoteLine(..*)/cac:Price(..1)/cac:AllowanceCharge(..1)/cbc:Amount(..1)
+BT-5 Value to be added @currencyID","cac:InvoiceLine/cac:Price/cac:AllowanceCharge/cbc:Amount
+BT-5 Value to be added @currencyID"
+LineItemNetPrice,"cac:InvoiceLine(..*)/cac:Price(..1)/cbc:PriceAmount(..1)
+cac:CreditNoteLine(..*)/cac:Price(..1)/cbc:PriceAmount(..1)
+BT-5 Value to be added @currencyID","cac:InvoiceLine/cac:Price/cbc:PriceAmount
+BT-5 Value to be added @currencyID"
+LineItemName,"cac:InvoiceLine(..*)/cac:Item(..1)/cbc:Name(..1)
+cac:CreditNoteLine(..*)/cac:Item(..1)/cbc:Name(..1)",cac:InvoiceLine/cac:Item/cbc:Name
+LineItemDescription,"cac:InvoiceLine(..*)/cac:Item(..1)/cbc:Description(..1)
+cac:CreditNoteLine(..*)/cac:Item(..1)/cbc:Description(..1)",cac:InvoiceLine/cac:Item/cbc:Description
+LineItemSellerId,"cac:InvoiceLine(..*)/cac:Item(..1)/cac:SellersItemIdentification(..1)/cbc:ID(..1)
+cac:CreditNoteLine(..*)/cac:Item(..1)/cac:SellersItemIdentification(..1)/cbc:ID(..1)",cac:InvoiceLine/cac:Item/cac:SellersItemIdentification/cbc:ID
+LineItemBuyerId,"cac:InvoiceLine(..*)/cac:Item(..1)/cac:BuyersItemIdentification(..1)/cbc:ID(..1)
+cac:CreditNoteLine(..*)/cac:Item(..1)/cac:BuyersItemIdentification(..1)/cbc:ID(..1)",cac:InvoiceLine/cac:Item/cac:BuyersItemIdentification/cbc:ID
+LineItemStandardIdentifer,"cac:InvoiceLine(..*)/cac:Item(..1)/cac:StandardItemIdentification(..1)/cbc:ID(..1)
+cac:CreditNoteLine(..*)/cac:Item(..1)/cac:StandardItemIdentification(..1)/cbc:ID(..1)",cac:InvoiceLine/cac:Item/cac:StandardItemIdentification/cbc:ID
+LineItemStandardIdentifer_SchemeID,"cac:InvoiceLine(..*)/cac:Item(..1)/cac:StandardItemIdentification(..1)/cbc:ID(..1)/@SchemeID(..1)
+cac:CreditNoteLine(..*)/cac:Item(..1)/cac:StandardItemIdentification(..1)/cbc:ID(..1)/@SchemeID(..1)",cac:InvoiceLine/cac:Item/cac:StandardItemIdentification/cbc:ID/@SchemeID
+LineItemOriginCountry,"cac:InvoiceLine(..*)/cac:Item(..1)/cac:OriginCountry(..1)/cbc:IdentificationCode(..1)
+cac:CreditNoteLine(..*)/cac:Item(..1)/cac:OriginCountry(..1)/cbc:IdentificationCode(..1)",cac:InvoiceLine/cac:Item/cac:OriginCountry/cbc:IdentificationCode
+ItemClassificationIdentifier,n(50),-
+ItemClassificationCode,"cac:InvoiceLine(..*)/cac:Item(..1)/cac:CommodityClassification(..50)/cbc:ItemClassificationCode(..1)
+cac:CreditNoteLine(..*)/cac:Item(..1)/cac:CommodityClassification(..50)/cbc:ItemClassificationCode(..1)",cac:InvoiceLine/cac:Item/cac:CommodityClassification/cbc:ItemClassificationCode
+ItemClassificationCode_ListID,"cac:InvoiceLine(..*)/cac:Item(..1)/cac:CommodityClassification(..50)/cbc:ItemClassificationCode(..1)//@listID(..1)
+cac:CreditNoteLine(..*)/cac:Item(..1)/cac:CommodityClassification(..50)/cbc:ItemClassificationCode(..1)//@listID(..1)",cac:InvoiceLine/cac:Item/cac:CommodityClassification/cbc:ItemClassificationCode/@listID
+ItemClassificationCode_VersionID,"cac:InvoiceLine(..*)/cac:Item(..1)/cac:CommodityClassification(..50)/cbc:ItemClassificationCode(..1)//@listVersionID(..1)
+cac:CreditNoteLine(..*)/cac:Item(..1)/cac:CommodityClassification(..50)/cbc:ItemClassificationCode(..1)//@listVersionID(..1)",cac:InvoiceLine/cac:Item/cac:CommodityClassification/cbc:ItemClassificationCode/@listVersionID
+AttributeIdentifier,n(50),-
+ItemAttributeName,"cac:InvoiceLine(..*)/cac:Item(..1)/cac:AdditionalItemProperty(..50)/cbc:Name(..1)
+cac:CreditNoteLine(..*)/cac:Item(..1)/cac:AdditionalItemProperty(..50)/cbc:Name(..1)",cac:InvoiceLine/cac:Item/cac:AdditionalItemProperty/cbc:Name
+ItemAttributeValue,"cac:InvoiceLine(..*)/cac:Item(..1)/cac:AdditionalItemProperty(..50)/cbc:Value(..1)
+cac:CreditNoteLine(..*)/cac:Item(..1)/cac:AdditionalItemProperty(..50)/cbc:Value(..1)",cac:InvoiceLine/cac:Item/cac:AdditionalItemProperty/cbc:Value
+LineAllowanceChargeIdentifier,n(10),-
+LineAllowanceIndicator,"cac:InvoiceLine(..*)/cac:AllowanceCharge(..10)/cbc:ChargeIndicator(..1)
+cac:CreditNoteLine(..*)/cac:AllowanceCharge(..10)/cbc:ChargeIndicator(..1)",cac:InvoiceLine/cac:AllowanceCharge/cbc:ChargeIndicator
+LineAllowanceAmount,"cac:InvoiceLine(..*)/cac:AllowanceCharge(..10)/cbc:Amount(..1)
+cac:CreditNoteLine(..*)/cac:AllowanceCharge(..10)/cbc:Amount(..1)
+BT-5 Value to be added @currencyID","cac:InvoiceLine/cac:AllowanceCharge/cbc:Amount
+BT-5 Value to be added @currencyID"
+LineAllowanceBaseAmount,"cac:InvoiceLine(..*)/cac:AllowanceCharge(..10)/cbc:BaseAmount(..1)
+cac:CreditNoteLine(..*)/cac:AllowanceCharge(..10)/cbc:BaseAmount(..1)
+BT-5 Value to be added @currencyID","cac:InvoiceLine/cac:AllowanceCharge/cbc:BaseAmount
+BT-5 Value to be added @currencyID"
+LineAllowancePercentage,"cac:InvoiceLine(..*)/cac:AllowanceCharge(..10)/cbc:MultiplierFactorNumeric (..1)
+cac:CreditNoteLine(..*)/cac:AllowanceCharge(..10)/cbc:MultiplierFactorNumeric (..1)",cac:InvoiceLine/cac:AllowanceCharge/cbc:MultiplierFactorNumeric
+LineAllowanceReason,"cac:InvoiceLine(..*)/cac:AllowanceCharge(..10)/cbc:AllowanceChargeReason(..1)
+cac:CreditNoteLine(..*)/cac:AllowanceCharge(..10)/cbc:AllowanceChargeReason(..1)",cac:InvoiceLine/cac:AllowanceCharge/cbc:AllowanceChargeReason
+LineAllowanceReasonCode,"cac:InvoiceLine(..*)/cac:AllowanceCharge(..10)/cbc:AllowanceChargeReasonCode(..1)
+cac:CreditNoteLine(..*)/cac:AllowanceCharge(..10)/cbc:AllowanceChargeReasonCode(..1)",cac:InvoiceLine/cac:AllowanceCharge/cbc:AllowanceChargeReasonCode
+LineChargeIndicator,"cac:InvoiceLine(..*)/cac:AllowanceCharge(..10)/cbc:ChargeIndicator(..1)
+cac:CreditNoteLine(..*)/cac:AllowanceCharge(..10)/cbc:ChargeIndicator(..1)",cac:InvoiceLine/cac:AllowanceCharge/cbc:ChargeIndicator
+LineChargeAmount,"cac:InvoiceLine(..*)/cac:AllowanceCharge(..10)/cbc:Amount(..1)
+cac:CreditNoteLine(..*)/cac:AllowanceCharge(..10)/cbc:Amount(..1)
+BT-5 Value to be added @currencyID","cac:InvoiceLine/cac:AllowanceCharge/cbc:Amount
+BT-5 Value to be added @currencyID"
+LineChargeBaseAmount,"cac:InvoiceLine(..*)/cac:AllowanceCharge(..10)/cbc:BaseAmount(..1)
+cac:CreditNoteLine(..*)/cac:AllowanceCharge(..10)/cbc:BaseAmount(..1)
+BT-5 Value to be added @currencyID","cac:InvoiceLine/cac:AllowanceCharge/cbc:BaseAmount
+BT-5 Value to be added @currencyID"
+LineChargePercentage,"cac:InvoiceLine(..*)/cac:AllowanceCharge(..10)/cbc:MultiplierFactorNumeric (..1)
+cac:CreditNoteLine(..*)/cac:AllowanceCharge(..10)/cbc:MultiplierFactorNumeric (..1)",cac:InvoiceLine/cac:AllowanceCharge/cbc:MultiplierFactorNumeric
+LineChargeReason,"cac:InvoiceLine(..*)/cac:AllowanceCharge(..10)/cbc:AllowanceChargeReason(..1)
+cac:CreditNoteLine(..*)/cac:AllowanceCharge(..10)/cbc:AllowanceChargeReason(..1)",cac:InvoiceLine/cac:AllowanceCharge/cbc:AllowanceChargeReason
+LineChargeCode,"cac:InvoiceLine(..*)/cac:AllowanceCharge(..10)/cbc:AllowanceChargeReasonCode(..1)
+cac:CreditNoteLine(..*)/cac:AllowanceCharge(..10)/cbc:AllowanceChargeReasonCode(..1)",cac:InvoiceLine/cac:AllowanceCharge/cbc:AllowanceChargeReasonCode
+InvoiceAllowanceChargeIdentifier,n(10),-
+InvoiceAllowanceIndicator,cac:AllowanceCharge(..10)/cbc:ChargeIndicator(..1),cac:AllowanceCharge/cbc:ChargeIndicator
+InvoiceAllowanceAmount,"cac:AllowanceCharge(..10)/cbc:Amount(..1)
+BT-5 Value to be added @currencyID","cac:AllowanceCharge/cbc:Amount
+BT-5 Value to be added @currencyID"
+InvoiceAllowanceBaseAmount,"cac:AllowanceCharge(..10)/cbc:BaseAmount(..1)
+BT-5 Value to be added @currencyID","cac:AllowanceCharge/cbc:BaseAmount
+BT-5 Value to be added @currencyID"
+InvoiceAllowancePercentage,cac:AllowanceCharge(..10)/cbc:MultiplierFactorNumeric(..1),cac:AllowanceCharge/cbc:MultiplierFactorNumeric
+InvoiceAllowanceVATCategory,cac:AllowanceCharge(..10)/cac:TaxCategory(..1)/cbc:ID(..1),cac:AllowanceCharge/cac:TaxCategory/cbc:ID
+InvoiceAllowanceVATRate,cac:AllowanceCharge(..10)/cac:TaxCategory(..1)/cbc:Percent(..1),cac:AllowanceCharge/cac:TaxCategory/cbc:Percent
+-,"cac:AllowanceCharge(..10)/cac:TaxCategory(..1)/cac:TaxScheme(..1)/cbc:ID=""VAT""(..1)","cac:AllowanceCharge/cac:TaxCategory/cac:TaxScheme/cbc:ID=""VAT"""
+InvoiceAllowanceReason,cac:AllowanceCharge(..10)/cbc:AllowanceChargeReason(..1),cac:AllowanceCharge/cbc:AllowanceChargeReason
+InvoiceAllowanceReasonCode,cac:AllowanceCharge(..10)/cbc:AllowanceChargeReasonCode(..1),cac:AllowanceCharge/cbc:AllowanceChargeReasonCode
+InvoiceChargeIndicator,cac:AllowanceCharge(..10)/cbc:ChargeIndicator(..1),cac:AllowanceCharge/cbc:ChargeIndicator
+InvoiceChargeAmount,"cac:AllowanceCharge(..10)/cbc:Amount(..1)
+BT-5 Value to be added @currencyID","cac:AllowanceCharge/cbc:Amount
+BT-5 Value to be added @currencyID"
+InvoiceChargeBaseAmount,"cac:AllowanceCharge(..10)/cbc:BaseAmount(..1)
+BT-5 Value to be added @currencyID","cac:AllowanceCharge/cbc:BaseAmount
+BT-5 Value to be added @currencyID"
+InvoiceChargePercentage,cac:AllowanceCharge(..10)/cbc:MultiplierFactorNumeric(..1),cac:AllowanceCharge/cbc:MultiplierFactorNumeric
+InvoiceChargeVATCategory,cac:AllowanceCharge(..10)/cac:TaxCategory(..1)/cbc:ID(..1),cac:AllowanceCharge/cac:TaxCategory/cbc:ID
+InvoiceChargeVATRate,cac:AllowanceCharge(..10)/cac:TaxCategory(..1)/cbc:Percent(..1),cac:AllowanceCharge/cac:TaxCategory/cbc:Percent
+-,"cac:AllowanceCharge(..10)/cac:TaxCategory(..1)/cac:TaxScheme(..1)/cbc:ID=""VAT""(..1)","cac:AllowanceCharge/cac:TaxCategory/cac:TaxScheme/cbc:ID=""VAT"""
+InvoiceChargeReason,cac:AllowanceCharge(..10)/cbc:AllowanceChargeReason(..1),cac:AllowanceCharge/cbc:AllowanceChargeReason
+InvoiceChargeReasonCode,cac:AllowanceCharge(..10)/cbc:AllowanceChargeReasonCode(..1),cac:AllowanceCharge/cbc:AllowanceChargeReasonCode
+InvoiceNetAmount,"cac:LegalMonetaryTotal(..1)/cbc:LineExtensionAmount(..1)
+BT-5 Value to be added @currencyID","cac:LegalMonetaryTotal/cbc:LineExtensionAmount
+BT-5 Value to be added @currencyID"
+TotalInvoiceAllowanceAmount,"cac:LegalMonetaryTotal(..1)/cbc:AllowanceTotalAmount(..1)
+BT-5 Value to be added @currencyID","cac:LegalMonetaryTotal/cbc:AllowanceTotalAmount
+BT-5 Value to be added @currencyID"
+TotalInvoiceChargeAmount,"cac:LegalMonetaryTotal(..1)/cbc:ChargeTotalAmount(..1)
+BT-5 Value to be added @currencyID","cac:LegalMonetaryTotal/cbc:ChargeTotalAmount
+BT-5 Value to be added @currencyID"
+InvoiceTotalWithoutVAT,"cac:LegalMonetaryTotal(..1)/cbc:TaxExclusiveAmount(..1)
+BT-5 Value to be added @currencyID","cac:LegalMonetaryTotal/cbc:TaxExclusiveAmount
+BT-5 Value to be added @currencyID"
+InvoiceTotalWithVAT,"cac:LegalMonetaryTotal(..1)/cbc:TaxInclusiveAmount(..1)
+BT-5 Value to be added @currencyID","cac:LegalMonetaryTotal/cbc:TaxInclusiveAmount
+BT-5 Value to be added @currencyID"
+InvoicePaidAmount,"cac:LegalMonetaryTotal(..1)/cbc:PrepaidAmount(..1)
+BT-5 Value to be added @currencyID","cac:LegalMonetaryTotal/cbc:PrepaidAmount
+BT-5 Value to be added @currencyID"
+RoundingAmount,"cac:LegalMonetaryTotal(..1)/cbc:PayableRoundingAmount(..1)
+BT-5 Value to be added @currencyID","cac:LegalMonetaryTotal/cbc:PayableRoundingAmount
+BT-5 Value to be added @currencyID"
+InvoiceDueAmountForPayment,"cac:LegalMonetaryTotal(..1)/cbc:PayableAmount(..1)
+BT-5 Value to be added @currencyID","cac:LegalMonetaryTotal/cbc:PayableAmount
+BT-5 Value to be added @currencyID"
+InvoiceTotalVATAmount,"cac:TaxTotal(..1)/cbc:TaxAmount(..1)
+BT-5 Value to be added @currencyID","cac:TaxTotal/cbc:TaxAmount
+BT-5 Value to be added @currencyID"
+InvoiceTotalVATAmountRON,"cac:TaxTotal(..1)/cbc:TaxAmount(..1)
+BT-6 Value to be added @currencyID",-
+SubTotalIdentifier,n(50),-
+InvoiceVATtaxableAmount,"cac:TaxTotal(..1)/cac:TaxSubtotal(..50)/cbc:TaxableAmount(..1)
+BT-5 Value to be added @currencyID","cac:TaxTotal/cac:TaxSubtotal/cbc:TaxableAmount
+BT-5 Value to be added @currencyID"
+InvoiceVATCategoryAmount,"cac:TaxTotal(..1)/cac:TaxSubtotal(..50)/cbc:TaxAmount(..1)
+BT-5 Value to be added @currencyID","cac:TaxTotal/cac:TaxSubtotal/cbc:TaxAmount
+BT-5 Value to be added @currencyID"
+VATCategoryCode,cac:TaxTotal(..1)/cac:TaxSubtotal(..50)/cac:TaxCategory(..1)/cbc:ID(..1),cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory/cbc:ID
+VATCategoryRate,cac:TaxTotal(..1)/cac:TaxSubtotal(..50)/cac:TaxCategory(..1)/cbc:Percent(..1),cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory/cbc:Percent
+VATExemptionReason,cac:TaxTotal(..1)/cac:TaxSubtotal(..50)/cac:TaxCategory(..1)/cbc:TaxExemptionReason(..1),cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory/cbc:TaxExemptionReason
+VATExemptionCode,cac:TaxTotal(..1)/cac:TaxSubtotal(..50)/cac:TaxCategory(..1)/cbc:TaxExemptionReasonCode(..1),cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory/cbc:TaxExemptionReasonCode
+-,"cac:TaxTotal(..1)/cac:TaxSubtotal(..50)/cac:TaxCategory(..1)/cac:TaxScheme(..1)/cbc:ID=""VAT""(..1)","cac:TaxTotal/cac:TaxSubtotal/cac:TaxCategory/cac:TaxScheme/cbc:ID=""VAT"""
+PayeeName,cac:PayeeParty(..1)/cac:PartyName(..1)/cbc:Name(..1),cac:PayeeParty/cac:PartyName/cbc:Name
+PayeeIdentificationID,cac:PayeeParty(..1)/cac:PartyIdentification(..1)/cbc:ID(..1),cac:PayeeParty/cac:PartyIdentification/cbc:ID
+PayeeIdentificationID_Scheme,cac:PayeeParty(..1)/cac:PartyIdentification(..1)/cbc:ID (..1)/ @SchemeID(..1),cac:PayeeParty/cac:PartyIdentification/cbc:ID / @SchemeID
+PayeeLegalID,cac:PayeeParty(..1)/cac:Party(..1)/cac:PartyLegalEntity(..1)/cbc:CompanyID(..1),cac:PayeeParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID
+PayeeLegalID_Scheme,cac:PayeeParty(..1)/cac:Party(..1)/cac:PartyLegalEntity(..1)/cbc:CompanyID(..1)/ @SchemeID(..1),cac:PayeeParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID/ @SchemeID
+PaymentDueDate,cbc:DueDate(..1),cbc:DueDate
+PaymentTerms,cac:PaymentTerms(..1)/cbc:Note(..1),cac:PaymentTerms/cbc:Note
+PaymentMeansCode,cac:PaymentMeans(..1)/cbc:PaymentMeansCode(..1),cac:PaymentMeans/cbc:PaymentMeansCode
+PaymentMeansText,cac:PaymentMeans(..1)/cbc:PaymentMeansCode(..1)/@name(..1),cac:PaymentMeans/cbc:PaymentMeansCode/@name
+PaymentInformation,cac:PaymentMeans(..1)/cbc:PaymentID(..1),cac:PaymentMeans/cbc:PaymentID
+BankAccount,cac:PaymentMeans(..1)/cac:PayeeFinancialAccount(..1)/cbc:ID(..1),cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:ID
+PaymentAccountName,cac:PaymentMeans(..1)/cac:PayeeFinancialAccount(..1)/cbc:Name(..1),cac:PaymentMeans/cac:PayeeFinancialAccount/cbc:Name
+PaymentServiceProviderID,cac:PaymentMeans(..1)/cac:PayeeFinancialAccount(..1)/cac:FinancialInstitutionBranch(..1)/cbc:ID(..1),cac:PaymentMeans/cac:PayeeFinancialAccount/cac:FinancialInstitutionBranch/cbc:ID
+CardPaymentAccount,cac:PaymentMeans(..1)/cac:CardAccount(..1)/cbc:PrimaryAccountNumberID(..1),cac:PaymentMeans/cac:CardAccount/cbc:PrimaryAccountNumberID
+PaymentCardHoldername,cac:PaymentMeans(..1)/cac:CardAccount(..1)/cbc:HolderName(..1),cac:PaymentMeans/cac:CardAccount/cbc:HolderName
+CardPaymentNetworkID,cac:PaymentMeans(..1)/cac:CardAccount(..1)/cbc:NetworkID(..1),cac:PaymentMeans/cac:CardAccount/cbc:NetworkID
+DirectDebitID,cac:PaymentMeans(..1)/cac:PaymentMandate(..1)/cbc:ID(..1),cac:PaymentMeans/cac:PaymentMandate/cbc:ID
+DirectDebitBankID,TBD,TBD
+DirectDebitAccount,cac:PaymentMeans(..1)/cac:PaymentMandate(..1)/cac:PayerFinancialAccount(..1)/cbc:ID(..1),cac:PaymentMeans/cac:PaymentMandate/cac:PayerFinancialAccount/cbc:ID
+PrecedingInvoiceIdentifier,n(500),-
+PreceedingInvoiceNumber,cac:BillingReference(..500)/cac:InvoiceDocumentReference(..1)/cbc:ID(..1),cac:BillingReference/cac:InvoiceDocumentReference/cbc:ID
+PreceedingInvoiceDate,cac:BillingReference(..500)/cac:InvoiceDocumentReference(..1)/cbc:IssueDate(..1),cac:BillingReference/cac:InvoiceDocumentReference/cbc:IssueDate
+"
+InvoicedObjectID",cac:AdditionalDocumentReference(..1)/cbc:ID(..1),cac:AdditionalDocumentReference/cbc:ID
+InvoicedObjectID_scheme,cac:AdditionalDocumentReference(..1)/cbc:ID(..1) / @schemeID(..1),cac:AdditionalDocumentReference/cbc:ID/@schemeID
+AdditionalDocDescription,cac:AdditionalDocumentReference(..1)/cbc:DocumentDescription(..1),cac:AdditionalDocumentReference/cbc:DocumentDescription
+AdditonalDocURL,cac:AdditionalDocumentReference(..1)/cac:Attachment(..1)/cac:External Reference(..1)/cbc:URI(..1),cac:AdditionalDocumentReference/cac:Attachment/cac:External Reference/cbc:URI
+AdditionalDocEmbedded,cac:AdditionalDocumentReference(..1)/cac:Attachment(..1)/cbc:EmbeddedDocumentBinaryObject(..1),cac:AdditionalDocumentReference/cac:Attachment/cbc:EmbeddedDocumentBinaryObject
+AdditionalDocEmbedded_Mimecode,cac:AdditionalDocumentReference(..1)/cac:Attachment(..1)/cbc:EmbeddedDocumentBinaryObject(..1)/@mimeCode(..1),cac:AdditionalDocumentReference/cac:Attachment/cbc:EmbeddedDocumentBinaryObject/@mimeCode
+AdditionalDocEmbedded_Filename,cac:AdditionalDocumentReference(..1)/cac:Attachment(..1)/cbc:EmbeddedDocumentBinaryObject(..1)/@filename(..1),cac:AdditionalDocumentReference/cac:Attachment/cbc:EmbeddedDocumentBinaryObject/@filename
+AdditionalDocReference,TBD,-
+-,-,"cac:AdditionalDocumentReference(..1)/cbc:DocumentTypeCode=130
+"
+DocTypeDescription,,
+DocHeaderDescription,,
+Exchange Rate,,
+InvoiceValueinRON,,
+OriginalInvoiceDate,,
+OriginalInvoiceAmountinRON,,
+OriginalInvoiceTaxAmountinRON,,
+OriginalInvoicePaymentType,,
+OriginalInvoicePaymentNumber,,
+OriginalInvoiceAmount,,
+OriginalInvoiceTaxAmount,,
+OriginalInvoiceCorrectionReason,,
+Transaction MovementNumber,,
+EinvoicingAuthorisation,,
+EinvoicingCode,,
+EinvoicingReference,,
+EinvoicingDateofReceipt,,
+DateEntry,,
+DateSettlement,,
+DateClearing,,
+ReturnPeriod,,
+OriginalTaxPeriod,,
+PlaceOfVATPoint,,
+UserID,,
+CompanyID,,
+SourceId,,
+SourceFileName,,
+GLPostingDate,,
+OrgHierarchy1,,
+OrgHierarchy2,,
+OrgHierarchy3,,
+OrgHierarchy4,,
+OrgHierarchy5,,
+GLAccountCodeLine_1,,
+GLAccountCodeLine_2,,
+GLAccountCodeAdvanceLine_1,,
+GLAccountCodeAdvanceLine_2,,
+TotalInvoiceValueInWords,,
+BuyerCode,,
+LineItemCode,,
+ReasonforCreditNote,,
+ReasonforInvoiceCorrection,,
+AccountingVoucherNumber,,
+AccountingVoucherDate,,
+UserDefinedHeader1,,
+UserDefinedHeader2,,
+UserDefinedHeader3,,
+UserDefinedHeader4,,
+UserDefinedHeader5,,
+UserDefinedHeader6,,
+UserDefinedHeader7,,
+UserDefinedHeader8,,
+UserDefinedHeader9,,
+UserDefinedHeader10,,
+UserDefinedLine1,,
+UserDefinedLine2,,
+UserDefinedLine3,,
+UserDefinedLine4,,
+UserDefinedLine5,,
+UserDefinedLine6,,
+UserDefinedLine7,,
+UserDefinedLine8,,
+UserDefinedLine9,,
+UserDefinedLine10,,
+UserDefinedAdvanceLine1,,
+UserDefinedAdvanceLine2,,
+UserDefinedAdvanceLine3,,
+UserDefinedAdvanceLine4,,
+UserDefinedAdvanceLine5,,
+UserDefinedAdvanceLine6,,
+UserDefinedAdvanceLine7,,
+UserDefinedAdvanceLine8,,
+UserDefinedAdvanceLine9,,
+UserDefinedAdvanceLine10,,

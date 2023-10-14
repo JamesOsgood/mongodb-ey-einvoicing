@@ -25,6 +25,7 @@
 			"../test-base/testing/src",
 			"./testcases/src",
 			"../../pyfixmsg"
-		]
+		],
+		"java.compile.nullAnalysis.mode": "disabled"
 	}
 }

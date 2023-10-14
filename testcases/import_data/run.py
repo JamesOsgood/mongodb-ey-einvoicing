@@ -28,8 +28,8 @@ class PySysTest(EYBaseTest):
 		# Gets the connection string from unix.properties and connects to MongoDB
 		db = self.get_db_connection()
 		self.clear_all(db)
-		# sub_dir = 'all'
-		sub_dir = 'sample'
+		sub_dir = 'all'
+		# sub_dir = 'sample'
 		# Data path is defined in unix.properties and defaults to ~/data/mongodb/ey
 		data_dir = os.path.join(os.path.expanduser(self.project.DATA_PATH), sub_dir)
 
@@ -180,16 +180,6 @@ class PySysTest(EYBaseTest):
 		self.queryable_field_defs['status'] = 'header|status'
 		self.queryable_field_defs['source'] = 'header|source'
 	
-	def get_immediate_parent_and_field_name(self, doc, fields):
-		parent = doc
-		index = 0
-		for index in range(len(fields) - 1):
-			parent = parent[fields[index]]
-
-		index += 1
-
-		return (parent, fields[index])
-
 	# Convert string to json date
 	def convert_date(self, parent, field_name):
 		value = parent[field_name]

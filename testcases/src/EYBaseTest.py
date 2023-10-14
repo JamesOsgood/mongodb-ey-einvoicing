@@ -67,4 +67,30 @@ class EYBaseTest(BaseTest):
 		
 		self.startProcess(command, args, state=FOREGROUND, stdout='mongoimport_out.log', stderr='mongoimport_err.log', timeout=360000 )
 
+	def get_immediate_parent_and_field_name(self, doc, fields):
+		parent = doc
+		index = 0
+		for index in range(len(fields) - 1):
+			field_name = fields[index]
+			if field_name in parent:
+				parent = parent[field_name]
+			else:
+				return None, None
+
+		index += 1
+
+		return (parent, fields[index])
+	
+	def get_field_value(self, doc, delimited_value_path):
+		parent, field_name = self.get_immediate_parent_and_field_name(doc, delimited_value_path.split('|'))
+		if parent != None:
+			if field_name in parent:
+				return parent[field_name]
+			else:
+				return None
+		
+		else:
+			return None
+
+
 

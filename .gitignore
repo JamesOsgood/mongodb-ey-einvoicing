@@ -134,6 +134,10 @@ dmypy.json
 bin/
 obj/
 
+# Java
+.gradle/
+*.jar
+
 # Let each env have its own unix.properties
 # unix.properties
 
