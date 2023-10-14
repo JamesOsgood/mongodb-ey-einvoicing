@@ -5,6 +5,8 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Indexes;
+
 import org.bson.conversions.Bson;
 import org.bson.Document;
 import com.mongodb.client.FindIterable;
@@ -31,13 +33,21 @@ class App {
 
     }
 
-    public boolean invoice_key_exists(String invoice_key) {
-        Bson filter = eq("queryable.invoice_key", invoice_key);
+    private void create_invoice_key_index(MongoCollection<Document> collection) {
+        collection.createIndex(Indexes.ascending("queryable.invoice_key"));
+    }
 
+    public boolean invoice_key_exists(String invoice_key) {
         String connectionString = "mongodb://localhost:27017/";
         MongoClient mongoClient = MongoClients.create(connectionString);
         MongoDatabase database = mongoClient.getDatabase("ey");
         MongoCollection<Document> collection = database.getCollection("invoice");
+
+        // Make sure index exists - would put this somewhere else, rather than call every time
+        create_invoice_key_index(collection);
+        
+        Bson filter = eq("queryable.invoice_key", invoice_key);
+
         MongoCursor<Document> result = collection.find(filter).cursor();
         boolean exists = false;
         while (result.hasNext()){
